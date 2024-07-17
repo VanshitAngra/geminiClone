@@ -12,8 +12,7 @@ const Sidebar = () => {
                 <img src={assets.plus_icon}  alt=""/>
                 {extended?<p>New Chat</p>:null}
             </div>
-            {extended?
-            <div className="recent">
+            {extended?<div className="recent">
                 <p className="recent-title">Recent</p>
                 <div className="recent-entry">
                     <img src={assets.message_icon} alt="" srcset="" />
@@ -40,7 +39,6 @@ const Sidebar = () => {
     </div>
 
 )
-// console.log(assets.menu_icon); // Check if this outputs the correct path
 }
 
 export default Sidebar
