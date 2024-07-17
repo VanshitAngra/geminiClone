@@ -7,7 +7,7 @@ const App = () => {
     <Sidebar/>
     <Main />
     </>
-    
+
   )
 }
 
