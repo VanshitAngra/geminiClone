@@ -1,9 +1,17 @@
 import React from 'react'
-
-const sidebar = () => {
+import'./Sidebar.css'
+import {assets} from '../../assets/assets'
+const Sidebar = () => {
   return (
-    <div></div>
-  )
+    <div className='sidebar'>
+         <div className="top">
+            <img src={assets.menu_icon} alt="" />
+        </div>
+        <div className="bottom"></div>
+    </div>
+
+)
+console.log(assets.menu_icon); // Check if this outputs the correct path
 }
 
-export default sidebar
+export default Sidebar
