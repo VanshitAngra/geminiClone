@@ -32,7 +32,7 @@ const ContextProvider = (props) => {
   const[loading,setLoading]=useState(false);
   const [resultData,setResultData]=useState("");
 
-  const onSet = async (prompt) => {
+  const onSent = async (prompt) => {
     try {
       const result = await runChat(prompt);
       setResponse(result);
@@ -44,6 +44,7 @@ const ContextProvider = (props) => {
 //   onSet("What is react js");
 
   const contextValue = {
+    
   };
 
   return (
