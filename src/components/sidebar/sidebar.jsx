@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <div className='sidebar'>
          <div className="top">
-            <img onClick={()=>setExtended(prev=>!prev)}className='menu' src={assets.menu_icon} alt="" />
+            <img onClick={()=>setExtended(prev=>!prev)}className='menu' src={assets.menu_icon} alt="" srcSet=""/>
             <div className="new-chat">
                 <img src={assets.plus_icon}  alt=""/>
                 {extended?<p>New Chat</p>:null}
@@ -15,7 +15,7 @@ const Sidebar = () => {
             {extended?<div className="recent">
                 <p className="recent-title">Recent</p>
                 <div className="recent-entry">
-                    <img src={assets.message_icon} alt="" srcset="" />
+                    <img src={assets.message_icon} alt="" srcSet="" />
                     <p>What is React ...</p>
                 </div>
             </div>
@@ -24,15 +24,15 @@ const Sidebar = () => {
         </div>
         <div className="bottom">
             <div className="bottom-item recent-entry">
-                <img src={assets.question_icon}alt="" srcset="" />
+                <img src={assets.question_icon}alt="" srcSet="" />
                 {extended?<p>Help</p>:null}
             </div>
             <div className="bottom-item recent-entry">
-                <img src={assets.history_icon}alt="" srcset="" />
+                <img src={assets.history_icon}alt="" srcSet="" />
                 {extended?<p>Activity</p>:null}
             </div>
             <div className="bottom-item recent-entry">
-                <img src={assets.setting_icon}alt="" srcset="" />
+                <img src={assets.setting_icon}alt="" srcSet="" />
                 {extended?<p>Settings</p>:null}
             </div>
         </div>
