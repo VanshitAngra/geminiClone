@@ -11,7 +11,10 @@ const Main = () => {
             <img src={assets.user_icon} alt="" srcSet="" />
         </div>
         <div className="main-container">
-            <div className="greet">
+
+            {!showResult?
+            <>
+                <div className="greet">
                 <p><span>Hello, Dev.</span></p>
                 <p>How can I help you today?</p>
             </div>
@@ -33,6 +36,22 @@ const Main = () => {
                     <img src={assets.code_icon} alt="" srcSet=""/>
                 </div>
             </div>
+            </>
+            :
+            <div className="result">
+                <div className="result-title">
+                    <img src={assets.user_icon} alt="" />
+                    <p>{recentPrompt}</p>
+                </div>
+                <div className="result-data">
+                    <img src={assets.gemini_icon} alt="" />
+                    <p dangerouslySetInnerHTML={{__html:resultData}}></p>
+                    {/* if i use{resultData} it will display all the tags used */}
+                </div>
+            </div>
+            
+            }
+            
             <div className="main-bottom">
                 <div className="search-box">
                     <input onChange={(e)=>setInput(e.target.value)} value={input} type="text" placeholder='Enter a prompt here'/>
