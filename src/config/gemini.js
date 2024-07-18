@@ -15,6 +15,7 @@ import {
   } from"@google/generative-ai"
   
 //   const apiKey = process.env.GEMINI_API_KEY;
+    // const apiKey = import.meta.env.VITE_API_KEY;
   const apiKey = "AIzaSyDNDhDkKK47u1SAivpdek75UFiyy9gDfQs";
   const genAI = new GoogleGenerativeAI(apiKey);
   
@@ -40,7 +41,9 @@ import {
     });
   
     const result = await chatSession.sendMessage(prompt);
-    console.log(result.response.text());
+    const response=result.response;;
+    console.log(response.text());
+    return response.text();
   }
   
   export default runChat;
