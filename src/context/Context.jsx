@@ -45,8 +45,6 @@ const ContextProvider = (props) => {
     setInput("")
   };
 
-//   onSet("What is react js");
-
   const contextValue = {
     prevPrompts,
     setPrevPrompts,

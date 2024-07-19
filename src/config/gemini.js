@@ -13,6 +13,8 @@ import {
     HarmCategory,
     HarmBlockThreshold,
   } from"@google/generative-ai"
+  import { config as configDotenv } from 'dotenv';
+  configDotenv();
   
 //   const apiKey = process.env.GEMINI_API_KEY;
     // const apiKey = import.meta.env.VITE_API_KEY;
